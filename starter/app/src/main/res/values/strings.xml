@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="buttonRegister">Register</string>
+    <string name="buttonLogin">Login</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="password_hint">*********</string>
+    <string name="welcome">WELCOME</string>
+    <string name="text_info_one">Are you ready to lead the way</string>
+    <string name="text_info_two">Luxury meets ultimate sitting comfort</string>
+    <string name="button_discover">Discover</string>
+</resources>
