@@ -10,6 +10,10 @@ class ShoeViewModel : ViewModel() {
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
 
+    private val _addOrCancel = MutableLiveData<Boolean>()
+    val addOrCancel: LiveData<Boolean>
+        get() = _addOrCancel
+
     init {
         resetList()
     }
@@ -18,5 +22,19 @@ class ShoeViewModel : ViewModel() {
         _shoeList.value = mutableListOf(
             Shoe("air max 90", 42.0, "Nike", "nice", mutableListOf("image1", "image2"))
         )
+    }
+
+    fun addNewShoe(name: String, size: Double, company: String, description: String){
+        val shoe = Shoe(name, size, company, description)
+        _shoeList.value?.add(shoe)
+        _addOrCancel.value = true
+    }
+
+    fun cancel(){
+        _addOrCancel.value = true
+    }
+
+    fun addCompleted(){
+        _addOrCancel.value = false
     }
 }

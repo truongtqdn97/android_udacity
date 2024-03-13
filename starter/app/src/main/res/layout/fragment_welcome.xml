@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="welcomeViewModel"
-            type="com.udacity.shoestore.viewmodel.WelcomeViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcomeConstraint"
         android:layout_width="match_parent"
@@ -17,6 +11,7 @@
 
         <TextView
             android:id="@+id/welcome"
+            style="@style/BlueButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
@@ -51,12 +46,12 @@
 
         <Button
             android:id="@+id/buttonDiscover"
+            style="@style/GreenButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:text="@string/button_discover"
             android:textColor="#33691E"
-            android:onClick="@{() -> welcomeViewModel.moveNext()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

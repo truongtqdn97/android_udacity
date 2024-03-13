@@ -12,4 +12,23 @@
     <string name="text_info_one">Are you ready to lead the way</string>
     <string name="text_info_two">Luxury meets ultimate sitting comfort</string>
     <string name="button_discover">Discover</string>
+    <string name="style_up">STYLE UP, STAND OUT</string>
+    <string name="meant_for_the_spotlight">Meant for the spotlight. Double attacked Air Units turns a classic silhouette into a modern icon. Make a bold statement in the new Air Max 90 LV8, styled by NewJeans</string>
+    <string name="shop">Shop</string>
+    <string name="shoes">Shoes</string>
+    <string name="scroll_shoe_list">scrollShoeList</string>
+    <string name="shoe_detail">Shoe Detail</string>
+    <string name="instruction">INSTRUCTION</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="shoe_name_hint">Shoe Name</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="description">Description</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="shoe_size">42</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+<!--    <string name="shoe_size_text">Shoe size: %.1f</string>-->
 </resources>

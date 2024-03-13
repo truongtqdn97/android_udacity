@@ -3,46 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="loginViewModel"
-            type="com.udacity.shoestore.viewmodel.LoginViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginFragment">
 
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/email_hint"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp"
-            android:textColorHint="#546E7A"
-            app:layout_constraintBottom_toTopOf="@+id/passwordLabel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
+        tools:context=".LoginFragment">
 
         <TextView
             android:id="@+id/emailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="60dp"
             android:text="@string/email_label"
-            android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/editEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/label" />
 
         <TextView
             android:id="@+id/passwordLabel"
@@ -66,22 +45,35 @@
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/passwordLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel"
+            style="@style/edit_text" />
 
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
-            android:background="@color/design_default_color_on_primary"
-            android:onClick="@{() -> loginViewModel.moveNext()}"
             android:text="@string/buttonRegister"
-            android:textColor="#5E35B1"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonLogin"
             app:layout_constraintEnd_toStartOf="@+id/buttonLogin"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/BlueButton" />
 
         <Button
             android:id="@+id/buttonLogin"
@@ -89,14 +81,12 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="92dp"
             android:layout_marginBottom="324dp"
-            android:background="@android:color/holo_green_light"
             android:text="@string/buttonLogin"
-            android:textColor="#0D47A1"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonRegister" />
+            app:layout_constraintStart_toEndOf="@+id/buttonRegister"
+            style="@style/GreenButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
