@@ -17,40 +17,32 @@ import com.udacity.shoestore.viewmodel.ShoeViewModel
 class ShoeDetailFragment : Fragment() {
 
     private val viewModel: ShoeViewModel by activityViewModels()
-    private var shoe = Shoe("test", 0.0, "", "")
-    private lateinit var binding: FragmentShoeDetailBinding
+    private var shoe = Shoe("", 0.0, "", "")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-         binding = DataBindingUtil.inflate(
+        val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_shoe_detail,
             container,
             false
         )
 
-        initBinding()
-        observe()
-
-
-
-        return binding.root
-    }
-
-    private fun initBinding(){
         binding.shoeViewModel = viewModel
 
         binding.shoeObj = shoe
-    }
 
-    private fun observe(){
         viewModel.addOrCancel.observe(viewLifecycleOwner, Observer { status ->
             if (status){
                 findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
                 viewModel.addCompleted()
             }
         })
+
+        return binding.root
     }
+
+
 }

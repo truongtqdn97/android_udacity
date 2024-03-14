@@ -25,7 +25,7 @@ class InstructionFragment : Fragment() {
         binding.buttonShop.setOnClickListener{
             findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
         }
-        // Inflate the layout for this fragment
+
         return binding.root
     }
 

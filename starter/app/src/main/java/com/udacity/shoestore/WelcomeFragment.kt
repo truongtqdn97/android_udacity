@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
-
 class WelcomeFragment : Fragment() {
 
     override fun onCreateView(
@@ -27,7 +26,6 @@ class WelcomeFragment : Fragment() {
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
         }
 
-        // Inflate the layout for this fragment
         return binding.root
     }
 
